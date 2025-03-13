@@ -1,0 +1,22 @@
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vw;
+    background-image: url(../../dist/images/fundo.png);
+    background-size: cover;
+    padding: 20px;
+    overflow: hidden;
+    
+        
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.2); //para deixa cor da imagem meia fosca
+        z-index: 1;
+    }
+}

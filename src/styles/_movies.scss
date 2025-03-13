@@ -1,0 +1,63 @@
+@use 'variaveis';
+
+.movies {
+    text-align: center;
+    padding: 40px 20px;
+
+    &__title {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        gap: 20px; //Espaçamento entre os cards
+        flex-wrap: wrap; // Permite que os cards se movam para a linha seguinte em telas menores
+    }
+
+    &__card {
+        background-color: variaveis.$primary-color;
+        border-radius: 8px;
+        padding: 20px;
+        width: 400px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: translateY(-5px); // Efeito de hover
+        }
+    }
+
+    &__card__image {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 15px; // Espaçamento abaixo da imagem
+    }
+
+    &__card__title {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: variaveis.$corDoTexto;
+    }
+
+    &__card__description {
+        font-size: 1.5rem;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__card__button {
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: 1rem;
+        color: variaveis.$corDoTexto;
+        background-color: variaveis.$corDoButton;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        margin-top: 10px;
+        font-weight: bolder;
+    }
+}

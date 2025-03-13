@@ -1,3 +1,63 @@
+@use 'variaveis';
+@use 'curiosities';
+@use 'hero';
+@use 'movies';
+@use 'trailers';
+@use 'footer';
+
+//importação de fontes
+@font-face {
+    font-family: Invincible;
+    src: url(../../assets/fonts/Deadpool-Movie.ttf.eot);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Invincible;
+    src: url(../../assets/fonts/Deadpool-Movie.ttf.woff);
+    font-weight: 700;
+}
+
 * {
-    background-color: red;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: variaveis.$primary-color;
+    font-family: variaveis.$font-stack;
+}
+
+.title {
+    font-size: 3rem;
+    color: variaveis.$corDoTexto;
+    margin-bottom: 20px;
+    font-family: variaveis.$font-stack;
+}
+
+  // Consultas de Mídia para Responsividade
+@media (max-width: 768px) {
+    .trailers__title {
+      font-size: 2rem; // Tamanho do título em telas menores
+    }
+
+    .trailers__video {
+      width: 45%; // Largura dos vídeos em tablets
+    }
+}
+
+@media (max-width: 480px) {
+    .trailers__title {
+      font-size: 1.5rem; // Tamanho do título em celulares
+    }
+
+.trailers__video {
+    width: 100%; // Largura total dos vídeos em celulares
+    margin: 10px 0; // Margem reduzida
+    }
+
+.footer__text {
+      font-size: 0.9rem; // Tamanho da fonte do footer em celulares
+    }
 }

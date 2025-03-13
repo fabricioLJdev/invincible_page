@@ -1,0 +1,30 @@
+@use 'variaveis';
+
+.trailers {
+    text-align: center;
+    padding: 40px 20px;
+
+    &__title {
+        font-size: 2.5rem;
+        color: variaveis.$primary-color;
+        margin-bottom: 30px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        gap: 20px; //Espaçamento entres os videos
+        flex-wrap: wrap; //Permite que os videos se movam para a linha seguinte em telas menores
+    }
+
+    &__video {
+        width: 30%; // Lagura entre os videos
+        margin: 20px; // Espaçamento ao redor dos videos
+        border-radius: 8px;
+        overflow: hidden; // Oculta a borda do iframe
+
+        iframe {
+            border: none; //Remove a borda do iframe
+        }
+    }
+}

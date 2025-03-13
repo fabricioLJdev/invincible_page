@@ -1,3 +1,186 @@
+.curiosities {
+  padding: 40px 20px;
+  text-align: center;
+}
+.curiosities__content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.curiosities__title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.curiosities__description {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vw;
+  background-image: url(../../dist/images/fundo.png);
+  background-size: cover;
+  padding: 20px;
+  overflow: hidden;
+}
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.movies {
+  text-align: center;
+  padding: 40px 20px;
+}
+.movies__title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+.movies__container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.movies__card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+.movies__card:hover {
+  transform: translateY(-5px);
+}
+.movies__card__image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.movies__card__title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+.movies__card__description {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.movies__card__button {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #000;
+  background-color: rgb(0, 174, 255);
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  font-weight: bolder;
+}
+
+.trailers {
+  text-align: center;
+  padding: 40px 20px;
+}
+.trailers__title {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.trailers__container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.trailers__video {
+  width: 30%;
+  margin: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.trailers__video iframe {
+  border: none;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer__text {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+@font-face {
+  font-family: Invincible;
+  src: url(../../assets/fonts/Deadpool-Movie.ttf.eot);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Invincible;
+  src: url(../../assets/fonts/Deadpool-Movie.ttf.woff);
+  font-weight: 700;
+}
 * {
-  background-color: red;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: #fff;
+  font-family: "Invincible", sans-serif;
+}
+
+.title {
+  font-size: 3rem;
+  color: #000;
+  margin-bottom: 20px;
+  font-family: "Invincible", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .trailers__title {
+    font-size: 2rem;
+  }
+  .trailers__video {
+    width: 45%;
+  }
+}
+@media (max-width: 480px) {
+  .trailers__title {
+    font-size: 1.5rem;
+  }
+  .trailers__video {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .footer__text {
+    font-size: 0.9rem;
+  }
 }
